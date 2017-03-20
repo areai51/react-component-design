@@ -6,7 +6,7 @@ The aim of this document is to set some very high guiding principles for develop
 ## Table of Contents
 
 * [Applying Atomic Design Principles to Component](#applying-atomic-design-principles-to-component-design) 
-* [How Re-Usable should your Components be?](#how-reusable-should-your-components-be)
+* [Do not over-engineer your Components be?](#do-not-over-engineer-your-component)
 * [The Skeleton and Skins Approach to Styling Components](#the-skeleton-and-skins-approach-to-styling-components)
 * [Leverage Higher Order Components (HOC)](#leverage-higher-order-components)
 
@@ -109,7 +109,7 @@ export default CardContainer;
 ```
 
 ### Templates
-Templates are a collection of stateful React Organisms. They would also be Higher Order Components that use the concept of Composition to build components.
+Templates are a collection of stateful React Organisms. They would also be Higher Order Components that use the concept of Composition to build components. Moreover this also helps to lift state as high as possible.
 
 Templates would be responsive and device aware and will pass information to load the relevant Adaptive Organisms based on the device viewport.
 Templates have a route associated with it, and would allow Webpack to do code splitting based on the routes.
@@ -135,8 +135,8 @@ export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
 Pages are templates with route parameters. Pages would also contain styles that will apply the ‘skin’ to the entire page. A skin essentially comprises of look and feel, aesthetics of the page. 
 
 
-## How Reusable should your Components be
-In our quest to make our components re-usable, we start to build in functionality that tries to cover all possible use cases that the component can be used in. While doing so we land up over engineering our components. We have examples of button components that also act as hyper link, or an Accordion component that can render either vertically or horizontally.
+## Do not over engineer your component
+In our quest to make our components re-usable, we start to build in functionality that tries to cover all possible use cases that the component can be used in. While doing so we end up over engineering our components. We have examples of button components that also act as hyper link, or an Accordion component that can render either vertically or horizontally.
 
 Here is an example from react bootstrap , where a button component work works as a hyperlink. This is an example of something one must avoid.
 
