@@ -56,7 +56,7 @@ const Card = (props) => {
   return (
     <div className={styles.cardContainer}>
       {cardDetails && cardDetails.map((card, index) =>
-        <div className={styles.card} key={`key-${index}`}>
+        <div className={styles.card} key={styles.id}>
           <img src={card.image} alt={card.heading}/>
           <h2 children={card.heading} />
           <Rating value={4} />
