@@ -6,7 +6,7 @@ The aim of this document is to set some very high guiding principles for develop
 ## Table of Contents
 
 * [Applying Atomic Design Principles to Component](#applying-atomic-design-principles-to-component-design) 
-* [Do not over-engineer your Components](#do-not-over-engineer-your-component)
+* [Do not Over-Engineer your Components](#do-not-over-engineer-your-component)
 * [The Skeleton and Skins Approach to Styling Components](#the-skeleton-and-skins-approach-to-styling-components)
 * [Leverage Higher Order Components (HOC)](#leverage-higher-order-components)
 
