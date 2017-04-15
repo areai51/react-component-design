@@ -13,7 +13,18 @@ The aim of this document is to set some very high guiding principles for develop
 
 ### Applying Atomic Design Principles to Component Design 
 While the components and container approach sets a broad guideline to building components, we feel following Atomic Design Principles can help teams be more consistent in their approach to building components.
+
+Atomic design is methodology for creating design systems. There are five distinct levels in atomic design:
+* Atoms
+* Molecules
+* Organisms
+* Templates
+* Pages
+
+![Alt text](./atomic_design.png?raw=true "Title")
+
 >Go Pure and Stateless as much as you can.
+
 
 ### Atoms
 Atoms are regular DOM elements with the necessary CSS class names and ARIA properties defined. 
@@ -23,11 +34,37 @@ While there are multiple schools of thought that advocate creating a React compo
 An Atom would not have an existence on its own and will always be used within a React Molecule. The primary role of an Atom is to ensure consistency in style and accessibility compliance throughout the application.
 Atoms will be responsive in nature.
 
+In short, Atoms are
+
+* The simplest building block
+* HTML tags
+* Not very useful on their own
+* Easily styled
+* Very reusable
+* Foundation of building a brand
+
+Here is an example of an atom.
+
+```javascript
+<Form>
+  <Label>Search</Label>
+  <Input />
+</Form>
+```
+
 ### Molecules
 Molecules will form the smallest unit of React Components. A molecule may consist of two or more Atoms or an Atom and molecule within it.
 Molecules are stateless React Components and will display data via props. They should be pure functional components. There are a [numerous benefits in keeping these as pure functional components.](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.t54zao6qp)
 Molecules will be responsive in nature and will change shape (read height and width) based on the container it is wrapped in. Molecules should contain styling that only defines its structure or skeleton.
 Avoid building components that do too many things.
+
+In short, Molecules are
+
+* Groups of Atoms bonded together
+* Serve as backbone of design system
+* Do one thing, do it well
+
+
 Here is an example for a Button molecule.
 
 ```javascript
@@ -81,6 +118,13 @@ export default Card;
 ### Organisms
 Organisms are stateful React Components. An Organism is a collection of stateless React Molecules. Organisms  contain state and will pass it down to the molecules within it.
 Organisms could be adaptive in nature. i.e an organism would change shape and form based on the device or screen-size it is being viewed in. eg: Navigation bar. Organisms would contain styles that only apply the wireframe or skeleton of the component. It should not apply any visual styling in terms of color and look and feel to the organism.
+
+In short, Organisms are
+
+* Groups of molecules
+* Distinct section of an interface
+* Portable, easily modified
+
 
 The CardContainer organism would look something as follows:
 
