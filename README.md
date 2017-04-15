@@ -23,8 +23,6 @@ Atomic design is methodology for creating design systems. There are five distinc
 
 ![Alt text](./atomic_design.png?raw=true "Title")
 
->Go Pure and Stateless as much as you can.
-
 
 ### Atoms
 Atoms are regular DOM elements with the necessary CSS class names and ARIA properties defined. 
