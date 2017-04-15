@@ -14,6 +14,8 @@ The aim of this document is to set some very high guiding principles for develop
 ### Applying Atomic Design Principles to Component Design 
 While the components and container approach sets a broad guideline to building components, we feel following Atomic Design Principles can help teams be more consistent in their approach to building components.
 
+> We're not designing pages, we're designing systems of components -- Stephen Hay
+
 Atomic design is methodology for creating design systems. There are five distinct levels in atomic design:
 * Atoms
 * Molecules
